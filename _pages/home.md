@@ -3,7 +3,7 @@ layout: splash
 permalink: /
 title: "TOPIK Practice Bank"
 header:
-  overlay_color: "#1f3a5f"
+  overlay_color: "#1e3932"
 excerpt: "Original TOPIK I & II practice questions with clear English explanations. Learn every question type, then test yourself."
 intro:
   - excerpt: "Pick your level and start with a free mini test."

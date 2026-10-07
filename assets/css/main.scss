@@ -1,10 +1,281 @@
 ---
-# 테마 스타일 위에 한글 폰트 설정을 덧씌웁니다.
+# 테마 스타일 위에 사이트 디자인을 덧씌웁니다.
+# 디자인 기준: 수업 슬라이드 디자인 "그린 × 웜 크림"
+# https://claude.ai/artifact/XoGgt9drxZkpvvhGEFBLdw
 ---
 
 @charset "utf-8";
 
+/* ---------- 디자인 토큰 ---------- */
+$tb-canvas: #fbefda;        // 페이지 바탕 (순백 대신)
+$tb-surface: #ffffff;       // 카드 표면 전용
+$tb-green-title: #006241;   // 제목
+$tb-green-accent: #00754a;  // 버튼, 태그, 링크, 핵심어
+$tb-green-house: #1e3932;   // 다크 밴드 (홈 상단, 푸터)
+$tb-green-uplift: #2b5148;  // 다크 위 카드, 보조 패널
+$tb-green-light: #d4e9e2;   // 정답 박스, 표 머리행
+$tb-gold: #cba258;          // 레벨 배지 전용, 다크 바탕에서만
+$tb-gold-lightest: #faf6ee; // 인용 상자
+$tb-ink: #2a3d45;           // 본문 (순수 검정 금지)
+$tb-ink-muted: #6b6b6b;     // 라벨, 캡션
+$tb-hairline: #e7e7e7;      // 표 행 구분선
+$tb-radius-card: 15px;
+$tb-radius-pill: 999px;
+$tb-shadow-card: 0 1px 3px rgba(0, 0, 0, 0.14);
+
+/* ---------- 테마 변수 덮어쓰기 (import 전에) ---------- */
 $sans-serif: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$serif: "Noto Serif KR", Georgia, serif;
+$background-color: $tb-canvas;
+$text-color: $tb-ink;
+$muted-text-color: $tb-ink-muted;
+$primary-color: $tb-green-accent;
+$border-color: $tb-hairline;
+$link-color: $tb-green-accent;
+$link-color-hover: $tb-green-title;
+$link-color-visited: $tb-green-accent;
+$masthead-link-color: $tb-ink;
+$masthead-link-color-hover: $tb-green-title;
+$navicon-link-color-hover: $tb-green-title;
+$footer-background-color: $tb-green-house;
+$code-background-color: $tb-gold-lightest;
+$border-radius: $tb-radius-card;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
+
+/* ---------- 타이포그래피 ---------- */
+body {
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4,
+.page__title,
+.archive__item-title {
+  color: $tb-green-title;
+}
+
+/* 대제목만 세리프 (본문에는 섞지 않음) */
+.page__title,
+.page__hero--overlay .page__title {
+  font-family: $serif;
+  font-weight: 700;
+}
+
+.page__content h2 {
+  border-bottom: 0;   // 제목 밑줄 액센트 쓰지 않음
+  padding-bottom: 0;
+}
+
+/* ---------- 상단 메뉴 ---------- */
+.masthead {
+  background-color: $tb-canvas;
+  border-bottom: 0;
+}
+
+.greedy-nav {
+  background: $tb-canvas;
+}
+
+.greedy-nav .visible-links a::before {
+  background: $tb-green-accent;   // 메뉴 hover 표시
+}
+
+/* ---------- 홈 상단 다크 밴드 ---------- */
+.page__hero--overlay {
+  background-color: $tb-green-house;
+}
+
+.page__hero--overlay .page__lead {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- 버튼과 태그: 알약형 ---------- */
+.btn {
+  border-radius: $tb-radius-pill;
+  padding: 0.6em 1.4em;
+  font-weight: 700;
+}
+
+.btn--primary {
+  background-color: $tb-green-accent;
+  color: #fff;
+
+  &:hover {
+    background-color: $tb-green-title;
+  }
+}
+
+.btn--inverse {
+  background-color: $tb-surface;
+  color: $tb-green-title;
+  border: 1px solid $tb-green-accent;
+
+  &:hover {
+    background-color: $tb-green-light;
+    color: $tb-green-title;
+  }
+}
+
+.page__taxonomy-item {
+  border-radius: $tb-radius-pill;
+  border-color: $tb-green-accent;
+  color: $tb-green-accent;
+  background-color: $tb-surface;
+}
+
+/* ---------- 카드 ---------- */
+.feature__item .archive__item,
+.grid__item .archive__item,
+.sidebar .author__content {
+  background-color: $tb-surface;
+  border-radius: $tb-radius-card;
+  box-shadow: $tb-shadow-card;
+}
+
+.feature__item .archive__item {
+  padding: 1.6em 1.6em 1.2em;
+}
+
+.grid__item .archive__item {
+  padding: 0 0 1em;
+  overflow: hidden;
+
+  .archive__item-title,
+  .archive__item-excerpt,
+  .page__meta {
+    padding: 0 1em;
+  }
+}
+
+.archive__item-teaser {
+  border-radius: 0;
+}
+
+/* 글 목차 상자 */
+.toc {
+  background-color: $tb-surface;
+  border-radius: $tb-radius-card;
+  box-shadow: $tb-shadow-card;
+  border: 0;
+
+  .nav__title {
+    background: $tb-green-house;
+  }
+}
+
+/* ---------- 상품 추천 박스 (_includes/product-box.html) ---------- */
+.product-box {
+  background-color: $tb-surface;
+  border-radius: $tb-radius-card;
+  box-shadow: $tb-shadow-card;
+  padding: 1.4em 1.6em;
+  margin: 2em 0;
+
+  .product-box__kicker {
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $tb-ink-muted;
+    margin: 0 0 0.4em;
+  }
+
+  .product-box__title {
+    font-weight: 700;
+    color: $tb-green-title;
+    margin: 0 0 0.3em;
+  }
+
+  .product-box__desc {
+    margin: 0 0 1em;
+  }
+
+  .btn {
+    margin: 0;
+  }
+}
+
+/* ---------- 정답·해설 박스 (<details>) ---------- */
+.page__content details {
+  background-color: $tb-green-light;
+  border-radius: $tb-radius-card;
+  padding: 0.9em 1.3em;
+  margin: 1.5em 0;
+
+  summary {
+    cursor: pointer;
+    color: $tb-green-title;
+    font-weight: 700;
+  }
+
+  &[open] summary {
+    margin-bottom: 0.6em;
+  }
+}
+
+/* ---------- 지시문 인용 상자 ---------- */
+.page__content blockquote {
+  background-color: $tb-gold-lightest;
+  border-left: 0;
+  border-radius: $tb-radius-card;
+  padding: 0.8em 1.3em;
+  margin-left: 0;
+  font-style: normal;
+  color: $tb-ink;
+}
+
+/* ---------- 표 ---------- */
+.page__content table {
+  background-color: $tb-surface;
+  border-radius: $tb-radius-card;
+  box-shadow: $tb-shadow-card;
+  border: 0;
+  overflow: hidden;
+}
+
+.page__content thead,
+.page__content th {
+  background-color: $tb-green-light;
+  color: $tb-green-title;
+  border-bottom: 0;
+}
+
+.page__content td {
+  border-bottom: 1px solid $tb-hairline;
+}
+
+/* ---------- 알림 상자 ---------- */
+.notice--primary {
+  background-color: $tb-green-light;
+  border-radius: $tb-radius-card;
+  box-shadow: none;
+}
+
+/* ---------- 푸터: 다크 밴드 ---------- */
+.page__footer {
+  background-color: $tb-green-house;
+  color: rgba(255, 255, 255, 0.7);
+
+  a,
+  a:visited {
+    color: #fff;
+  }
+
+  .page__footer-follow .social-icons .fas,
+  .page__footer-follow .social-icons .fab {
+    color: #fff;
+  }
+}
+
+/* ---------- 레벨 배지: 금색, 다크 바탕 위에서만 ---------- */
+.level-badge {
+  display: inline-block;
+  border: 1px solid $tb-gold;
+  color: $tb-gold;
+  border-radius: $tb-radius-pill;
+  padding: 0.1em 0.8em;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
