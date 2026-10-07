@@ -16,6 +16,10 @@ A. Gumroad 팔로우: 아래 버튼 링크를 본인 Gumroad 프로필 주소로
 B. MailerLite: 가입 후 만든 구독 폼의 HTML 코드를 이 자리에 붙여넣기
 -->
 
+{% if site.gumroad_store != "" %}
 [Follow on Gumroad]({{ site.gumroad_store }}){: .btn .btn--primary .btn--large}
 
 No spam. Unsubscribe anytime.
+{% else %}
+**Sign-up opens soon.** In the meantime, grab the [free mini tests]({{ "/free/" | relative_url }}) and the [question-type guides]({{ "/lessons/" | relative_url }}).
+{% endif %}

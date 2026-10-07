@@ -18,19 +18,20 @@ repository: "wq54696-dotcom/topik-bank"
 author:
   name: "Your Name"                                # 바꾸세요
   bio: "Korean teacher creating original TOPIK practice materials."
-  links:
-    - label: "Gumroad Store"
-      icon: "fas fa-fw fa-store"
-      url: "https://yourname.gumroad.com"          # 바꾸세요
+  # Gumroad 가입 후 아래 주석(#)을 풀고 주소를 넣으세요. 예시 주소를 그대로 두면 남의 가게로 연결될 수 있습니다.
+  # links:
+  #   - label: "Gumroad Store"
+  #     icon: "fas fa-fw fa-store"
+  #     url: "https://내아이디.gumroad.com"
 
-footer:
-  links:
-    - label: "Gumroad Store"
-      icon: "fas fa-fw fa-store"
-      url: "https://yourname.gumroad.com"          # 바꾸세요
+# footer:
+#   links:
+#     - label: "Gumroad Store"
+#       icon: "fas fa-fw fa-store"
+#       url: "https://내아이디.gumroad.com"
 
-# 판매 링크 (상품 페이지에서 재사용)
-gumroad_store: "https://yourname.gumroad.com"      # 바꾸세요
+# 판매 링크 (구독 페이지 등에서 재사용). 비어 있으면 Gumroad 버튼이 숨겨짐
+gumroad_store: ""                                  # 바꾸세요: Gumroad 가입 후 "https://내아이디.gumroad.com"
 
 # 댓글: giscus (GitHub Discussions). 설정 방법은 README 참고
 comments:

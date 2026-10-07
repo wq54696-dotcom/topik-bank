@@ -17,4 +17,4 @@ This site is not affiliated with the National Institute for International Educat
 
 ## Contact
 
-Questions about a product? Email: your-email@example.com <!-- 바꾸세요 -->
+Questions about a product? A contact email will be added here soon. <!-- 바꾸세요: 연락용 이메일을 받으면 "Email: 주소"로 교체 -->
