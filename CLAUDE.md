@@ -17,7 +17,9 @@
 | 푸시 방법 | 터미널 git에는 GitHub 인증 없음. 커밋은 Claude가, 푸시는 GitHub Desktop에서 사용자가 |
 | 로컬 빌드 검증 | 안 됨 (Ruby 미설치). GitHub Pages 빌드로 확인 |
 | 사용 안 하는 저장소 | `topik-bank-Public` (빈 저장소, 삭제 예정) |
-| 도메인, Gumroad, giscus, 분석 | 전부 미설정 (설정값은 빈칸 또는 예시값) |
+| 도메인, Gumroad, giscus, 분석 | 전부 미설정. 예시 주소·이메일은 공개 화면에서 숨김(빈 값이면 버튼·링크 자동 숨김), 댓글은 꺼 둠 |
+| SEO 기본 | `url` 설정(사이트맵 절대 주소), 공유 이미지 `og-default.png`, 파비콘, 404·태그 페이지 (2026-10-07) |
+| 사용자 대기 | 작가 이름(지금은 사이트 이름으로 대체)·소개·연락 이메일, 검수(`Desktop\topik_bank\검수_체크리스트.md`), Gumroad 가입(`유료상품\blank30\gumroad_등록자료.md`), 도메인 구매 |
 | 사용 도구 | Windows PC, GitHub Desktop 사용 중 |
 
 ## 3. 바로 할 일 (순서대로)
