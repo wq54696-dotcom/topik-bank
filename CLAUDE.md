@@ -11,14 +11,18 @@
 | 항목 | 상태 |
 | --- | --- |
 | GitHub 계정 | `wq54696-dotcom` (가입·로그인 완료) |
-| 저장소 | `wq54696-dotcom/topik-bank`, Public, **빈 저장소로 생성만 됨** |
-| 사이트 파일 | 이 폴더에 준비 완료, **아직 커밋·푸시 전** |
-| GitHub Pages | **아직 켜지 않음** |
-| 로컬 빌드 검증 | 안 됨 (이전 환경에서 rubygems 접근 불가). YAML 문법과 Liquid 괄호 짝만 점검함 |
+| 저장소 | `wq54696-dotcom/topik-bank`, Public. 로컬 원본: `Desktop\topik_bank\topik-bank` (git 저장소) |
+| 사이트 파일 | 첫 커밋 푸시 완료 (2026-10-07) |
+| GitHub Pages | 켜짐, 빌드 성공. https://wq54696-dotcom.github.io/topik-bank/ |
+| 푸시 방법 | 터미널 git에는 GitHub 인증 없음. 커밋은 Claude가, 푸시는 GitHub Desktop에서 사용자가 |
+| 로컬 빌드 검증 | 안 됨 (Ruby 미설치). GitHub Pages 빌드로 확인 |
+| 사용 안 하는 저장소 | `topik-bank-Public` (빈 저장소, 삭제 예정) |
 | 도메인, Gumroad, giscus, 분석 | 전부 미설정 (설정값은 빈칸 또는 예시값) |
 | 사용 도구 | Windows PC, GitHub Desktop 사용 중 |
 
 ## 3. 바로 할 일 (순서대로)
+
+> 1~4번 완료 (2026-10-07). 글 주소는 `/lessons/:title/` (파일명의 슬러그 기준), 카테고리 아카이브도 `/lessons/`.
 
 1. 이 폴더 내용을 저장소에 커밋하고 푸시
    - 커밋 메시지 예: `Initial site skeleton (Jekyll + Minimal Mistakes)`
@@ -49,6 +53,12 @@
 | `assets/images/` | 표지, 샘플 페이지 이미지 | 장당 300KB 이하, `sample-cover.png`는 임시 표지 |
 | `_data/navigation.yml` | 상단 메뉴 | |
 | `README.md` | 사용자용 한국어 운영 안내 | 사이트 빌드에서 제외됨 |
+
+| `_drafts/` | 검수 전 글 초안 | 사이트에 안 나옴(저장소에는 공개). 검수 후 날짜 붙여 `_posts/`로 이동 |
+
+저장소 밖 파일 (`Desktop\topik_bank\`, 공개 금지):
+- `문항관리.xlsx`: 시트 `현황`(자동 집계) / `문항` / `목록`(드롭다운 값) / `유형표`(번호 구간, topik.go.kr 대조 전 "확인 필요"). 행 추가는 Excel COM으로. openpyxl로 저장하면 시트 간 드롭다운이 지워짐
+- 유료 상품 원고·PDF도 여기 둠
 
 카테고리(통일해서 사용): `TOPIK I Reading`, `TOPIK I Listening`, `TOPIK II Reading`, `TOPIK II Listening`, `TOPIK II Writing`, `Vocabulary & Grammar`, `Exam Guide`
 
@@ -89,8 +99,21 @@ IBT는 문항 수가 적고 시간이 짧음. 제작 전 topik.go.kr에서 최�
 
 1. 사이트 뼈대 공개 (위 3번 항목)
 2. 콘텐츠: 문항 관리 스프레드시트, 유형 분석 글 10편(TOPIK I 4, II 6), 무료 미니 테스트 2종, 첫 유료 상품 1종(유형별 30제), 샘플 이미지
+   - 완료: 문항관리.xlsx / 글 공개 1편(T2 읽기 빈칸) / 초안 2편(`_drafts`: T2 읽기 13~15 순서 배열, T1 읽기 34~39 빈칸), 사용자 검수 대기
+   - 남은 글: TOPIK I 3편, TOPIK II 4편 (쓰기 51~52, 53, 54 우선)
 3. 판매 연결: Gumroad 가입·은행 연결, 상품 등록, 구독자 할인 코드, 상품 페이지 링크 교체, giscus·분석 연결
 4. 공개·유입: 개인 도메인 연결(HTTPS), Search Console 사이트맵 제출, Reddit·Pinterest 등에 무료 자료 공유, 주 1~2편 발행
+
+### 개인 도메인: `topikbank.com` (결정됨, 구매 대기)
+
+2026-10-07 RDAP 조회 시 미등록. 사용자가 직접 구매.
+
+1. [사용자] Porkbun에서 구매: 1~2년 + 자동 갱신, WHOIS Privacy 켜기 (영구 구매 불가, 최대 10년 선결제)
+2. [사용자] DNS: 기본 parking 레코드 삭제 후 A `@` → 185.199.108.153 / 109.153 / 110.153 / 111.153, CNAME `www` → `wq54696-dotcom.github.io`
+3. [Claude] DNS 전파 확인 (`Resolve-DnsName topikbank.com`)
+4. [Claude] **DNS 확인 후에만** `CNAME` 파일(`topikbank.com`) 추가, `_config.yml`의 `url: "https://topikbank.com"`, `baseurl: ""` 수정 후 커밋. 미리 넣으면 github.io 주소가 연결 안 된 도메인으로 넘어가 사이트가 끊김
+5. [사용자] GitHub Desktop 푸시 → Settings → Pages에서 도메인 확인, 인증서 발급 후 Enforce HTTPS 체크
+6. [Claude] Search Console 등록 안내, 사이트맵 `https://topikbank.com/sitemap.xml` 제출
 
 ## 9. 백업과 이전 원칙
 
