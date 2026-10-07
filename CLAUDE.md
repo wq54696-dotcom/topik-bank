@@ -107,7 +107,11 @@ IBT는 문항 수가 적고 시간이 짧음. 제작 전 topik.go.kr에서 최�
      - 수정은 `make_mini_tests.py`의 TESTS 데이터를 고치고 `python make_mini_tests.py` (Edge 헤드리스 인쇄, Noto Sans KR 내장)
      - 검수 후: PDF를 `assets/free/`로 복사 → `_pages/free.md` 표의 "Coming soon"을 PDF 링크로 교체 → 문항 상태 "공개"
      - PDF 안의 사이트 주소(`SITE` 변수)는 도메인 이전 후 바꿔서 다시 생성
-   - 다음: 첫 유료 상품(T2 읽기 빈칸 30제) 원고, 샘플 이미지
+   - 첫 유료 상품 완성, 검수 대기: `Desktop\topik_bank\유료상품\blank30\topik2-reading-blank-30.pdf` (13쪽, 3세트×10문항, 전략·점수표·정답·해설+단서). 문항관리.xlsx 77문항(공개 2, 초안 75)
+     - 원고 `questions.py`, 생성 `python build.py` (정답 위치 고정 시드로 균등 배분, 표지·샘플 이미지·answers.csv 함께 생성)
+     - 사이트: `assets/images/blank30-cover.jpg`, `blank30-sample-1.jpg`(1~3번만), `_shop/topik2-reading-blank-30.md` 갱신
+     - 상품 페이지: `gumroad_url`이 비어 있으면 "Coming soon · Get notified"(구독 페이지) 버튼, 채우면 구매 버튼으로 자동 전환
+   - 다음: 사용자 검수 → Gumroad 등록(로드맵 3번). 가격 $5 제안 그대로인지 확인 필요
    - 쓰기 모범 답안 글자 수: 53번 238자, 54번 약 660자 (공백 포함, 문단 들여쓰기 1칸씩 포함)
    - 다음 유료 상품 후보: TOPIK II 쓰기 51~54 자료 ($7~12). 쓰기 초안 글의 상품 박스는 현재 `/subscribe/`로 연결("coming soon")
 3. 판매 연결: Gumroad 가입·은행 연결, 상품 등록, 구독자 할인 코드, 상품 페이지 링크 교체, giscus·분석 연결
