@@ -37,7 +37,8 @@
 - 정적 사이트: Jekyll, GitHub Pages 기본 빌드 (`github-pages` gem 기준). 도메인 구매 시 Cloudflare Pages로 이전 예정 (8번 로드맵)
 - 테마: `remote_theme: mmistakes/minimal-mistakes@4.26.2`
 - `baseurl: "/topik-bank"` (개인 도메인 연결 후 `""`로 변경, `url`도 함께 수정)
-- 한글 폰트: `_includes/head/custom.html`에서 Noto Sans KR 로드, `assets/css/main.scss`에서 `$sans-serif` 덮어씀
+- 한글 폰트: `_includes/head/custom.html`에서 Noto Sans KR(본문)·Noto Serif KR(대제목) 로드
+- 디자인: 사용자의 디자인 시스템 "그린 × 웜 크림"(https://claude.ai/artifact/XoGgt9drxZkpvvhGEFBLdw)을 따름. 토큰은 `assets/css/main.scss` 맨 위 `$tb-*` 변수. 크림 바탕, 그린 4단계(제목 #006241 / 강조 #00754A / 다크 #1E3932 / 정답 틴트 #D4E9E2), 금색은 레벨 배지(`.level-badge`, 다크 바탕)에만, 알약형 버튼, 흰 카드(15px, 그림자 한 겹). 그라디언트·밑줄 액센트·사이드 스트라이프 금지. PDF 생성기 3종도 같은 색(인쇄용이라 바탕은 흰색)
 - 컬렉션 `shop`: `_shop/*.md` → `/shop/:name/`
 - 댓글: giscus 설정 자리만 있음 (`repo_id`, `category_id` 비어 있음)
 
