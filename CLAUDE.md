@@ -58,6 +58,7 @@
 
 저장소 밖 파일 (`Desktop\topik_bank\`, 공개 금지):
 - `문항관리.xlsx`: 시트 `현황`(자동 집계) / `문항` / `목록`(드롭다운 값) / `유형표`(번호 구간, topik.go.kr 대조 전 "확인 필요"). 행 추가는 Excel COM으로. openpyxl로 저장하면 시트 간 드롭다운이 지워짐
+- `무료자료\`: 무료 미니 테스트 생성기와 PDF (검수 전 원본)
 - 유료 상품 원고·PDF도 여기 둠
 
 카테고리(통일해서 사용): `TOPIK I Reading`, `TOPIK I Listening`, `TOPIK II Reading`, `TOPIK II Listening`, `TOPIK II Writing`, `Vocabulary & Grammar`, `Exam Guide`
@@ -102,7 +103,11 @@ IBT는 문항 수가 적고 시간이 짧음. 제작 전 topik.go.kr에서 최�
    - 완료: 문항관리.xlsx (27문항: 공개 2, 초안 25) / 글 공개 1편(T2 읽기 빈칸)
    - 초안 9편(`_drafts`, 사용자 검수 대기): TOPIK I 읽기 31~33 주제어, 34~39 빈칸, 40~42 실용문 불일치, 46~48 중심 생각 / TOPIK II 읽기 13~15 순서 배열, 25~27 신문 기사 제목 / 쓰기 51~52, 53 그래프, 54 에세이
    - 유형 분석 글 10편 목표 달성 (공개 1 + 초안 9). 듣기 글은 음성 파일 필요해 보류
-   - 다음: 무료 미니 테스트 2종(PDF), 첫 유료 상품(T2 읽기 빈칸 30제) 원고, 샘플 이미지
+   - 무료 미니 테스트 2종 PDF 완성, 검수 대기: `Desktop\topik_bank\무료자료\` (TOPIK I 읽기 10문항 15분, TOPIK II 읽기 10문항 20분). 문항관리.xlsx 47문항(공개 2, 초안 45)
+     - 수정은 `make_mini_tests.py`의 TESTS 데이터를 고치고 `python make_mini_tests.py` (Edge 헤드리스 인쇄, Noto Sans KR 내장)
+     - 검수 후: PDF를 `assets/free/`로 복사 → `_pages/free.md` 표의 "Coming soon"을 PDF 링크로 교체 → 문항 상태 "공개"
+     - PDF 안의 사이트 주소(`SITE` 변수)는 도메인 이전 후 바꿔서 다시 생성
+   - 다음: 첫 유료 상품(T2 읽기 빈칸 30제) 원고, 샘플 이미지
    - 쓰기 모범 답안 글자 수: 53번 238자, 54번 약 660자 (공백 포함, 문단 들여쓰기 1칸씩 포함)
    - 다음 유료 상품 후보: TOPIK II 쓰기 51~54 자료 ($7~12). 쓰기 초안 글의 상품 박스는 현재 `/subscribe/`로 연결("coming soon")
 3. 판매 연결: Gumroad 가입·은행 연결, 상품 등록, 구독자 할인 코드, 상품 페이지 링크 교체, giscus·분석 연결
