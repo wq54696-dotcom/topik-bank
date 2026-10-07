@@ -6,22 +6,23 @@ header:
   overlay_color: "#1e3932"
 excerpt: "Original TOPIK I & II practice questions with clear English explanations. Learn every question type, then test yourself."
 intro:
-  - excerpt: "Pick your level and start with a free mini test."
+  - excerpt: "Pick your level and learn one question type at a time."
+# url: 해당 레벨 글이 공개되면 "/lessons/#topik-i-reading"처럼 카테고리 앵커로 바꾸기
 feature_row:
   - title: "TOPIK I (Level 1-2)"
-    excerpt: "Reading and listening question types for beginners, explained step by step."
-    url: "/lessons/#topik-i-reading"
+    excerpt: "Reading question types for beginners, explained step by step with original practice questions."
+    url: "/lessons/"
     btn_label: "Start TOPIK I"
     btn_class: "btn--primary"
   - title: "TOPIK II (Level 3-6)"
-    excerpt: "Reading, listening and writing strategies for intermediate and advanced learners."
+    excerpt: "Reading and writing strategies for intermediate and advanced learners, including Writing 51-54."
     url: "/lessons/#topik-ii-reading"
     btn_label: "Start TOPIK II"
     btn_class: "btn--primary"
   - title: "Free Mini Tests"
-    excerpt: "Download short PDF tests with answers and explanations. No sign-up needed."
+    excerpt: "Short printable PDF tests with an answer key and English explanations. No sign-up needed."
     url: "/free/"
-    btn_label: "Get Free Tests"
+    btn_label: "See Free Tests"
     btn_class: "btn--inverse"
 ---
 

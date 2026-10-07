@@ -24,7 +24,7 @@ Each mini test is a printable PDF with original questions, an answer key and exp
 
 ## Want more practice?
 
-Our practice banks have 30 questions per question type, plus full mock tests.
+Our practice banks give you 30 original questions for one question type, each with an English explanation.
 
 [See practice banks]({{ "/shop/" | relative_url }}){: .btn .btn--primary}
 [Get new free tests by email]({{ "/subscribe/" | relative_url }}){: .btn .btn--inverse}

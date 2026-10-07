@@ -2,7 +2,7 @@
 layout: collection
 permalink: /shop/
 title: "Shop"
-excerpt: "Original TOPIK practice banks and mock tests. Instant PDF download via Gumroad."
+excerpt: "Original TOPIK practice banks with English explanations. Instant PDF download via Gumroad."
 collection: shop
 entries_layout: grid
 classes: wide
