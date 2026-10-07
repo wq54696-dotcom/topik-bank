@@ -19,6 +19,7 @@
 | 사용 안 하는 저장소 | `topik-bank-Public` (빈 저장소, 삭제 예정) |
 | 도메인, Gumroad, giscus, 분석 | 전부 미설정. 예시 주소·이메일은 공개 화면에서 숨김(빈 값이면 버튼·링크 자동 숨김), 댓글은 꺼 둠 |
 | SEO 기본 | `url` 설정(사이트맵 절대 주소), 공유 이미지 `og-default.png`, 파비콘, 404·태그 페이지 (2026-10-07) |
+| 검수 화면 | https://claude.ai/artifact/PGMUiQvNw9ic5ruTRG97ai (비공개). 저장소 `items`(문항 75개, 출처 문항관리.xlsx 초안) / `reviews`(문항 ID별 `status` pass·fix·todo, `note`). Claude는 `ArtifactData list reviews`로 읽어 원고·PDF·xlsx에 반영 |
 | 사용자 대기 | 작가 이름(지금은 사이트 이름으로 대체)·소개·연락 이메일, 검수(`Desktop\topik_bank\검수_체크리스트.md`), Gumroad 가입(`유료상품\blank30\gumroad_등록자료.md`), 도메인 구매 |
 | 사용 도구 | Windows PC, GitHub Desktop 사용 중 |
 
