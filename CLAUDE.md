@@ -34,7 +34,7 @@
 
 ## 4. 기술 구성
 
-- 정적 사이트: Jekyll, GitHub Pages 기본 빌드 (`github-pages` gem 기준)
+- 정적 사이트: Jekyll, GitHub Pages 기본 빌드 (`github-pages` gem 기준). 도메인 구매 시 Cloudflare Pages로 이전 예정 (8번 로드맵)
 - 테마: `remote_theme: mmistakes/minimal-mistakes@4.26.2`
 - `baseurl: "/topik-bank"` (개인 도메인 연결 후 `""`로 변경, `url`도 함께 수정)
 - 한글 폰트: `_includes/head/custom.html`에서 Noto Sans KR 로드, `assets/css/main.scss`에서 `$sans-serif` 덮어씀
@@ -105,18 +105,26 @@ IBT는 문항 수가 적고 시간이 짧음. 제작 전 topik.go.kr에서 최�
    - 쓰기 모범 답안 글자 수: 53번 238자, 54번 약 660자 (공백 포함, 문단 들여쓰기 1칸씩 포함)
    - 다음 유료 상품 후보: TOPIK II 쓰기 51~54 자료 ($7~12). 쓰기 초안 글의 상품 박스는 현재 `/subscribe/`로 연결("coming soon")
 3. 판매 연결: Gumroad 가입·은행 연결, 상품 등록, 구독자 할인 코드, 상품 페이지 링크 교체, giscus·분석 연결
-4. 공개·유입: 개인 도메인 연결(HTTPS), Search Console 사이트맵 제출, Reddit·Pinterest 등에 무료 자료 공유, 주 1~2편 발행
+4. 공개·유입: 개인 도메인 연결 + Cloudflare Pages 이전(아래), Search Console 사이트맵 제출, Reddit·Pinterest 등에 무료 자료 공유, 주 1~2편 발행
 
-### 개인 도메인: `topikbank.com` (결정됨, 구매 대기)
+### 개인 도메인 `topikbank.com` + Cloudflare Pages 이전 (결정됨, 구매 대기)
 
-2026-10-07 RDAP 조회 시 미등록. 사용자가 직접 구매.
+**왜 옮기나**: GitHub Pages 규정은 "주로 상거래를 위한 사이트"를 금지. 결제는 Gumroad라 지금은 괜찮지만, 상품이 늘면 위반 소지. Cloudflare Pages는 무료 요금제에서도 상업적 이용 허용. 주소가 어차피 바뀌는 도메인 연결 시점에 함께 옮김. **유료 상품 본격 판매 전에 완료할 것.**
 
-1. [사용자] Porkbun에서 구매: 1~2년 + 자동 갱신, WHOIS Privacy 켜기 (영구 구매 불가, 최대 10년 선결제)
-2. [사용자] DNS: 기본 parking 레코드 삭제 후 A `@` → 185.199.108.153 / 109.153 / 110.153 / 111.153, CNAME `www` → `wq54696-dotcom.github.io`
-3. [Claude] DNS 전파 확인 (`Resolve-DnsName topikbank.com`)
-4. [Claude] **DNS 확인 후에만** `CNAME` 파일(`topikbank.com`) 추가, `_config.yml`의 `url: "https://topikbank.com"`, `baseurl: ""` 수정 후 커밋. 미리 넣으면 github.io 주소가 연결 안 된 도메인으로 넘어가 사이트가 끊김
-5. [사용자] GitHub Desktop 푸시 → Settings → Pages에서 도메인 확인, 인증서 발급 후 Enforce HTTPS 체크
-6. [Claude] Search Console 등록 안내, 사이트맵 `https://topikbank.com/sitemap.xml` 제출
+**그때까지**: GitHub Pages 유지. 학습 글 중심, 판매 링크는 보조로.
+
+도메인: 2026-10-07 RDAP 조회 시 미등록. 영구 구매 불가(최대 10년 선결제), 1~2년 + 자동 갱신 권장.
+
+1. [사용자] Cloudflare 가입 → Domain Registration에서 `topikbank.com` 구매 (원가 판매, WHOIS 개인정보 기본 보호, 자동 갱신 확인). DNS도 Cloudflare에서 자동 관리됨
+2. [사용자] Workers & Pages → Create → Pages → Connect to Git → `wq54696-dotcom/topik-bank` 선택 (GitHub 연동 권한 승인 필요)
+3. [Claude 안내] 빌드 설정: Framework `Jekyll`, Build command `bundle exec jekyll build --baseurl ""`, Output `_site`, 환경 변수 `RUBY_VERSION` (Gemfile의 github-pages gem과 맞는 버전, 이전 시 확인). `--baseurl ""` 덕분에 `_config.yml`을 안 바꿔도 GitHub Pages와 동시에 작동
+4. [Claude] `*.pages.dev` 임시 주소에서 전 페이지 점검 (홈, 레슨, 상품, CSS, 한글 폰트)
+5. [사용자] Pages 프로젝트 → Custom domains → `topikbank.com`, `www.topikbank.com` 추가 (같은 Cloudflare 계정이라 DNS 레코드 자동 생성, HTTPS 자동)
+6. [Claude] `_config.yml`: `url: "https://topikbank.com"`, `baseurl: ""`로 수정 커밋 → 빌드 명령의 `--baseurl ""`는 그대로 둬도 무방
+7. [사용자] GitHub 저장소 Settings → Pages 끄기 (Unpublish). 예전 github.io 주소는 끊김: 유입이 적은 지금 옮기는 게 유리
+8. [Claude] Search Console 등록 안내, 사이트맵 `https://topikbank.com/sitemap.xml` 제출. 같은 Cloudflare 계정에서 Web Analytics(무료, 쿠키 없음)도 연결 검토
+
+푸시·저장소 관리는 지금처럼 GitHub Desktop 그대로. 푸시하면 Cloudflare가 자동 빌드.
 
 ## 9. 백업과 이전 원칙
 
