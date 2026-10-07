@@ -1,0 +1,10 @@
+{% comment %}
+  레슨 글 하단 상품 추천 박스.
+  사용법: include product-box.html title="상품명" desc="한 줄 설명" url="/shop/상품주소/"
+  (실제로 쓸 때는 앞뒤를 중괄호+퍼센트 기호로 감쌉니다)
+{% endcomment %}
+<div class="notice--primary">
+  <p><strong>{{ include.title }}</strong></p>
+  <p>{{ include.desc }}</p>
+  <p><a href="{{ include.url | relative_url }}" class="btn btn--primary">See details</a></p>
+</div>

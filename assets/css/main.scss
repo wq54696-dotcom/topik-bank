@@ -1,0 +1,10 @@
+---
+# 테마 스타일 위에 한글 폰트 설정을 덧씌웁니다.
+---
+
+@charset "utf-8";
+
+$sans-serif: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";

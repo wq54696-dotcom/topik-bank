@@ -1,0 +1,122 @@
+# ============================================================
+# 사이트 기본 설정
+# "바꾸세요" 표시가 있는 줄만 본인 정보로 수정하면 됩니다.
+# 이 파일을 수정한 뒤에는 사이트가 다시 빌드될 때까지 1~2분 기다리세요.
+# ============================================================
+
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "default"   # default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
+
+locale: "en-US"
+title: "TOPIK Practice Bank"                       # 바꾸세요: 사이트 이름
+subtitle: "Original TOPIK practice questions"
+description: "Original TOPIK I and TOPIK II practice questions, question-type guides, and mock tests with English explanations."
+url: ""                                            # 바꾸세요: 도메인 연결 후 "https://내도메인.com"
+baseurl: "/topik-bank"                             # 저장소 이름과 같게. 개인 도메인 연결 후에는 ""
+repository: "wq54696-dotcom/topik-bank"
+
+author:
+  name: "Your Name"                                # 바꾸세요
+  bio: "Korean teacher creating original TOPIK practice materials."
+  links:
+    - label: "Gumroad Store"
+      icon: "fas fa-fw fa-store"
+      url: "https://yourname.gumroad.com"          # 바꾸세요
+
+footer:
+  links:
+    - label: "Gumroad Store"
+      icon: "fas fa-fw fa-store"
+      url: "https://yourname.gumroad.com"          # 바꾸세요
+
+# 판매 링크 (상품 페이지에서 재사용)
+gumroad_store: "https://yourname.gumroad.com"      # 바꾸세요
+
+# 댓글: giscus (GitHub Discussions). 설정 방법은 README 참고
+comments:
+  provider: "giscus"
+  giscus:
+    repo_id: ""            # 바꾸세요 (giscus.app에서 발급)
+    category_name: "Comments"
+    category_id: ""        # 바꾸세요
+    discussion_term: "pathname"
+    reactions_enabled: "1"
+    theme: "light"
+
+# 방문 분석 (선택). Google Analytics 측정 ID를 넣으면 작동
+analytics:
+  provider: false          # 사용 시 "google-gtag"
+  google:
+    tracking_id: ""
+
+search: true
+search_full_content: false
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: /lessons/:title/
+timezone: Asia/Seoul
+
+include:
+  - _pages
+
+exclude:
+  - README.md
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+# 교재(상품) 페이지 모음
+collections:
+  shop:
+    output: true
+    permalink: /shop/:name/
+
+defaults:
+  # 레슨 글 기본값
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      toc: true
+      toc_sticky: true
+  # 고정 페이지 기본값
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+  # 상품 페이지 기본값
+  - scope:
+      path: ""
+      type: shop
+    values:
+      layout: single
+      author_profile: false
+      comments: false
+      share: true
+
+category_archive:
+  type: liquid
+  path: /lessons/
+tag_archive:
+  type: liquid
+  path: /tags/
