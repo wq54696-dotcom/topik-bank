@@ -1,7 +1,7 @@
 ---
 title: "TOPIK II Reading: Fill-in-the-Blank 30"
 excerpt: "30 original fill-in-the-blank questions (TOPIK II Reading Q16-18 type) for Level 3-4, in 3 sets with an answer key and English explanations."
-price: "$5"                                              # 바꾸세요
+price: "$5"                                              # 2026-10-12 사용자 확정
 gumroad_url: ""                                          # Gumroad 상품 등록 후 링크 입력. 비어 있으면 "Coming soon" 버튼이 나옴
 header:
   teaser: /assets/images/blank30-cover.jpg
