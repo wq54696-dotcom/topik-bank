@@ -1,6 +1,6 @@
 ---
 title: "TOPIK II Reading 25-27: How to Understand Korean News Headlines"
-excerpt: "Korean headlines drop grammar and use picture words like 거북이걸음 and 몸살. Learn the 15 headline words that appear most often and try three original practice questions."
+excerpt: "Korean headlines drop grammar and use picture words like 거북이걸음 and 몸살. Learn 15 common headline words and try three original practice questions."
 categories:
   - TOPIK II Reading
 tags:

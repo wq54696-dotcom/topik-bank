@@ -159,6 +159,15 @@ IBT는 문항 수가 적고 시간이 짧음. 제작 전 topik.go.kr에서 최�
 
 푸시·저장소 관리는 지금처럼 GitHub Desktop 그대로. 푸시하면 Cloudflare가 자동 빌드.
 
+**사전 점검 결과 (2026-10-12, `Desktop\topik_bank\팀작업\사이트팀\cloudflare_이전_준비.md`)**: 실제 빌드는 못 돌려 봄. 이전할 때 함께 적용할 것:
+- Ruby 3.3.4 고정(`.ruby-version` 또는 `RUBY_VERSION`): Cloudflare 기본 Ruby가 더 높아 `github-pages` gem 빌드가 실패할 수 있음
+- 3단계의 `--baseurl ""`만으로는 `url`이 github.io로 남아 canonical·사이트맵 주소가 틀림 → `_config.cloudflare.yml`(url, baseurl 덮어쓰기) + `--config _config.yml,_config.cloudflare.yml` 방식으로
+- 환경 변수 `JEKYLL_ENV=production` 추가, `Gemfile`에 `github-pages` 버전 명시(권장)
+- 도메인 연결 후 사이트 주소가 박힌 곳도 교체: PDF 생성기 2개의 `SITE` 변수(PDF 재생성), `gumroad_등록자료.md`
+- **순서 권고**: 무료 PDF 공개, Gumroad 등록, 외부 홍보는 도메인 이전 뒤에 하는 것이 안전(주소가 PDF와 홍보 글에 들어감)
+
+다른 팀 문서: `팀작업\판매팀\쓰기상품_기획안.md`(쓰기 51~54 상품 36문항·$9 제안), `팀작업\유입팀\발행일정_홍보문안.md`(9편 발행 일정 10/20~11/17, Reddit·Pinterest 문안, Search Console 절차)
+
 ## 9. 백업과 이전 원칙
 
 - GitHub가 막혀도 로컬 폴더가 원본. 월 1회 외장 하드나 클라우드 드라이브에 복사

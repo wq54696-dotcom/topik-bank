@@ -15,7 +15,7 @@ AI 초안이므로 문장·보기·해설을 직접 다듬고, 문항관리.xlsx
 문항 ID: T1-R-31-0001 ~ 0003
 -->
 
-TOPIK I Reading starts at question 31 with three quick questions: you read two very short sentences and choose the **one word** that describes what they are about. These are free points if you know the trick.
+TOPIK I Reading starts at question 31 with three quick questions: you read two very short sentences and choose the **one word** that describes what they are about. These are quick points if you know the trick.
 
 ## What the question looks like
 

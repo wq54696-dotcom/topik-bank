@@ -16,7 +16,7 @@ AI 초안이므로 문장·모범 답안·해설을 직접 다듬고, 문항관�
 문항 ID: T2-W-54-0001
 -->
 
-Question 54 is the last and biggest question in TOPIK II Writing: a **600-700 character** essay worth 50 points. It decides whether you reach Level 5 or 6. The good news is that the prompt always tells you what to write about. Your job is to answer its questions in a clear structure.
+Question 54 is the last and biggest question in TOPIK II Writing: a **600-700 character** essay worth 50 points. It has the biggest effect on your writing score. The good news is that the prompt always tells you what to write about. Your job is to answer its questions in a clear structure.
 
 ## What the question looks like
 

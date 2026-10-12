@@ -1,6 +1,6 @@
 ---
 title: "TOPIK II Writing 51 and 52: How to Fill the Blanks with Full Sentences"
-excerpt: "Questions 51 and 52 are worth 20 points together and take less than 10 minutes once you know the pattern. Learn the 3-step method and try four original practice questions with model answers."
+excerpt: "Questions 51 and 52 are worth 20 points together. Learn the 3-step method and try four original practice questions with model answers."
 categories:
   - TOPIK II Writing
 tags:
