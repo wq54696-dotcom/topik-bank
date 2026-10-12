@@ -3,9 +3,11 @@ permalink: /about/
 title: "About"
 ---
 
-<!-- 바꾸세요: 본인 소개로 교체 -->
+Hi, I'm **Peter Jang**. I create original TOPIK practice materials for learners around the world.
 
-Hi, I'm **Your Name**, a Korean language teacher. I create original TOPIK practice materials for learners around the world.
+> 남이 나를 알아주지 않는 것을 걱정하지 말고, 내가 남을 제대로 알지 못함을 걱정하라.
+>
+> *Don't worry that others don't know you; worry that you don't know others.*
 
 ## How the questions are made
 
@@ -17,4 +19,4 @@ This site is not affiliated with the National Institute for International Educat
 
 ## Contact
 
-Questions about a product? A contact email will be added here soon. <!-- 바꾸세요: 연락용 이메일을 받으면 "Email: 주소"로 교체 -->
+Questions about a product or a mistake you found? Email: [yun943744@gmail.com](mailto:yun943744@gmail.com)
