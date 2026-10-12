@@ -20,7 +20,8 @@
 | 도메인, Gumroad, giscus, 분석 | 전부 미설정. 예시 주소·이메일은 공개 화면에서 숨김(빈 값이면 버튼·링크 자동 숨김), 댓글은 꺼 둠 |
 | SEO 기본 | `url` 설정(사이트맵 절대 주소), 공유 이미지 `og-default.png`, 파비콘, 404·태그 페이지 (2026-10-07) |
 | 검수 화면 | https://claude.ai/artifact/PGMUiQvNw9ic5ruTRG97ai (비공개). 저장소 `items`(문항 75개, 출처 문항관리.xlsx 초안) / `reviews`(문항 ID별 `status` pass·fix·todo, `note`). Claude는 `ArtifactData list reviews`로 읽어 원고·PDF·xlsx에 반영 |
-| 진행판 | https://claude.ai/artifact/3YrKQL6CM7xwfypweEDte1 (비공개). 저장소 `board/meta`(기준일, 한 줄 요약, 팀 5개, 주차) / `tasks/<ID>`(S 사이트·C 콘텐츠·R 검수·G 판매·M 유입, `status`: done·claude·user·blocked·todo·hold). **작업이 끝나거나 상태가 바뀔 때마다 Claude가 `ArtifactData`로 해당 task와 `meta.updated`를 갱신할 것** |
+| 진행판 | https://claude.ai/artifact/3YrKQL6CM7xwfypweEDte1 (비공개). 저장소 `board/meta`(기준일, 한 줄 요약, 팀 5개, 주차) / `tasks/<ID>`(S 사이트·C 콘텐츠·R 검수·G 판매·M 유입, `status`: done·claude·user·blocked·todo·hold). **작업이 끝나거나 상태가 바뀔 때마다 Claude가 `ArtifactData`로 해당 task와 `meta.updated`를 갱신할 것.** 칸반 5칸(내 차례·Claude 진행·대기·예정·완료). "내 차례"(`status: user`) 카드에는 반드시 바로 일할 수 있는 연결을 넣을 것: `links: [{label, url}]`(첫 링크가 카드 전체 클릭, https만) 또는 `copy: {label, text}`(Claude에게 보낼 답변 양식 복사) |
+| 팀 문서 페이지 | https://claude.ai/artifact/STpUBHgmCenyMLpYuLfE8Y (비공개). `팀작업\make_docs_page.py`가 .md 문서를 묶어 생성, 앵커 `#sales #growth #site #review #gumroad`. 문서를 고치면 다시 생성해 같은 경로로 게시. 검수 화면은 `#mini2 #blog #bank30` 앵커로 묶음 바로 열림 |
 | 사용자 대기 | 작가 이름(지금은 사이트 이름으로 대체)·소개·연락 이메일, 검수(`Desktop\topik_bank\검수_체크리스트.md`), Gumroad 가입(`유료상품\blank30\gumroad_등록자료.md`), 도메인 구매 |
 | 사용 도구 | Windows PC, GitHub Desktop 사용 중 |
 
