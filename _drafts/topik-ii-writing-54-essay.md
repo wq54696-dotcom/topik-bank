@@ -1,5 +1,6 @@
 ---
 title: "TOPIK II Writing 54: How to Write the 600-700 Character Essay"
+hub_key: t2-w-54   # /topik-i/, /topik-ii/ 허브 표에서 이 글로 연결하는 열쇠 (_data/topik_map.yml의 key)
 excerpt: "A 4-paragraph plan, a time plan and the writing style that scores well in TOPIK II Writing 54, with an original prompt and a full model answer."
 categories:
   - TOPIK II Writing

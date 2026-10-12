@@ -1,5 +1,6 @@
 ---
 title: "TOPIK I Reading 40-42: How to Find the Sentence That Doesn't Match a Notice"
+hub_key: t1-r-40   # /topik-i/, /topik-ii/ 허브 표에서 이 글로 연결하는 열쇠 (_data/topik_map.yml의 key)
 excerpt: "Questions 40-42 show a notice, message or poster and ask which sentence is NOT true. Learn the paraphrase check and try three original practice questions."
 categories:
   - TOPIK I Reading

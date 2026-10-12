@@ -1,5 +1,6 @@
 ---
 title: "TOPIK II Reading: How to Solve Fill-in-the-Blank Questions"
+hub_key: t2-r-16   # /topik-i/, /topik-ii/ 허브 표에서 이 글로 연결하는 열쇠 (_data/topik_map.yml의 key)
 excerpt: "A 3-step method for the blank questions in TOPIK II Reading, with two original practice questions."
 categories:
   - TOPIK II Reading

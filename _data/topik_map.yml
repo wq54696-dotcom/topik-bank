@@ -1,0 +1,106 @@
+# TOPIK 허브 페이지(/topik-i/, /topik-ii/)의 문항 번호 표.
+# key: 글 머리말의 hub_key와 같으면 그 글로 자동 연결됩니다. 글이 아직 없으면 "Not yet"로 표시됩니다.
+# shop: 관련 상품 페이지가 있으면 주소를 적습니다.
+# 번호 구간은 PBT(지필 시험) 기준이며 시중 교재와 대조했습니다(2026-10). 시험이 개편되면 topik.go.kr에서 확인 후 고치세요.
+
+topik-i:
+  - section: "Reading"
+    summary: "Questions 31-70 · 40 questions · 60 minutes · 100 points"
+    rows:
+      - range: "31-33"
+        type: "What are the sentences about?"
+        ko: "무엇에 대한 내용입니까?"
+        key: t1-r-31
+      - range: "34-39"
+        type: "Choose the word for the blank"
+        ko: "(  )에 들어갈 가장 알맞은 것을 고르십시오."
+        key: t1-r-34
+      - range: "40-42"
+        type: "Find the sentence that does NOT match (notices, messages)"
+        ko: "다음을 읽고 맞지 않는 것을 고르십시오."
+        key: t1-r-40
+      - range: "43-45"
+        type: "Find the sentence that matches the passage"
+        ko: "다음의 내용과 같은 것을 고르십시오."
+        key: t1-r-43
+      - range: "46-48"
+        type: "Choose the main idea"
+        ko: "다음을 읽고 중심 생각을 고르십시오."
+        key: t1-r-46
+      - range: "49-70"
+        type: "Longer passages with two questions each, plus sentence order"
+        ko: "다음을 읽고 물음에 답하십시오."
+        key: t1-r-49
+
+topik-ii:
+  - section: "Reading"
+    summary: "Questions 1-50 · 50 questions · 70 minutes · 100 points"
+    rows:
+      - range: "1-2"
+        type: "Choose the grammar for the blank"
+        ko: "(  )에 들어갈 가장 알맞은 것을 고르십시오."
+        key: t2-r-01
+      - range: "3-4"
+        type: "Choose the expression with a similar meaning"
+        ko: "밑줄 친 부분과 의미가 비슷한 것을 고르십시오."
+        key: t2-r-03
+      - range: "5-8"
+        type: "What is this text about? (ads, notices)"
+        ko: "다음은 무엇에 대한 글인지 고르십시오."
+        key: t2-r-05
+      - range: "9-12"
+        type: "Find the sentence that matches the text or chart"
+        ko: "다음 글 또는 그래프의 내용과 같은 것을 고르십시오."
+        key: t2-r-09
+      - range: "13-15"
+        type: "Put four sentences in order"
+        ko: "다음을 순서대로 맞게 배열한 것을 고르십시오."
+        key: t2-r-13
+      - range: "16-18"
+        type: "Fill in the blank in a short passage"
+        ko: "(  )에 들어갈 내용으로 가장 알맞은 것을 고르십시오."
+        key: t2-r-16
+        shop: /shop/topik2-reading-blank-30/
+      - range: "19-24"
+        type: "Passages with two questions each"
+        ko: "다음을 읽고 물음에 답하십시오."
+        key: t2-r-19
+      - range: "25-27"
+        type: "Explain a news headline"
+        ko: "다음 신문 기사의 제목을 가장 잘 설명한 것을 고르십시오."
+        key: t2-r-25
+      - range: "28-31"
+        type: "Fill in the blank in a longer passage"
+        ko: "(  )에 들어갈 내용으로 가장 알맞은 것을 고르십시오."
+        key: t2-r-28
+      - range: "32-34"
+        type: "Find the sentence that matches the passage"
+        ko: "다음을 읽고 글의 내용과 같은 것을 고르십시오."
+        key: t2-r-32
+      - range: "35-38"
+        type: "Choose the topic of the passage"
+        ko: "다음을 읽고 글의 주제로 가장 알맞은 것을 고르십시오."
+        key: t2-r-35
+      - range: "39-41"
+        type: "Choose where the sentence belongs"
+        ko: "주어진 문장이 들어갈 곳으로 가장 알맞은 것을 고르십시오."
+        key: t2-r-39
+      - range: "42-50"
+        type: "Long passages with two or three questions each"
+        ko: "다음을 읽고 물음에 답하십시오."
+        key: t2-r-42
+  - section: "Writing"
+    summary: "Questions 51-54 · 4 questions · 50 minutes · 100 points"
+    rows:
+      - range: "51-52"
+        type: "Complete the text with one sentence per blank (10 points each)"
+        ko: "다음 글의 ㉠과 ㉡에 알맞은 말을 각각 쓰시오."
+        key: t2-w-51
+      - range: "53"
+        type: "Describe a graph or data in 200-300 characters (30 points)"
+        ko: "다음을 참고하여 200~300자의 글로 쓰시오."
+        key: t2-w-53
+      - range: "54"
+        type: "Write an opinion essay in 600-700 characters (50 points)"
+        ko: "다음을 주제로 하여 자신의 생각을 600~700자로 글을 쓰시오."
+        key: t2-w-54

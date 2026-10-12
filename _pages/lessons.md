@@ -1,6 +1,6 @@
 ---
 layout: categories
 permalink: /lessons/
-title: "Question Types"
+title: "All Guides"
 excerpt: "Guides for every TOPIK question type, grouped by section."
 ---

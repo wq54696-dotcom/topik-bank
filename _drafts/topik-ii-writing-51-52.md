@@ -1,5 +1,6 @@
 ---
 title: "TOPIK II Writing 51 and 52: How to Fill the Blanks with Full Sentences"
+hub_key: t2-w-51   # /topik-i/, /topik-ii/ 허브 표에서 이 글로 연결하는 열쇠 (_data/topik_map.yml의 key)
 excerpt: "Questions 51 and 52 are worth 20 points together. Learn the 3-step method and try four original practice questions with model answers."
 categories:
   - TOPIK II Writing

@@ -1,5 +1,6 @@
 ---
 title: "TOPIK II Reading: How to Solve Sentence Order Questions (13-15)"
+hub_key: t2-r-13   # /topik-i/, /topik-ii/ 허브 표에서 이 글로 연결하는 열쇠 (_data/topik_map.yml의 key)
 excerpt: "Put four sentences in the right order in under a minute: a 3-step method for TOPIK II Reading questions 13-15, with three original practice questions."
 categories:
   - TOPIK II Reading

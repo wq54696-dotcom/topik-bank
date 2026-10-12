@@ -57,7 +57,9 @@
 | `_includes/product-box.html` | 글 하단 상품 추천 박스 | `{% include product-box.html title="" desc="" url="" %}` |
 | `assets/free/` | **무료** PDF만 | 유료 파일 절대 금지(공개 저장소라 누구나 받을 수 있음) |
 | `assets/images/` | 표지, 샘플 페이지 이미지 | 장당 300KB 이하, `sample-cover.png`는 임시 표지 |
-| `_data/navigation.yml` | 상단 메뉴 | |
+| `_data/navigation.yml` | 상단 메뉴 | TOPIK I · TOPIK II · All Guides · Free Tests · Shop · About · Subscribe |
+| `_data/topik_map.yml` | 허브 페이지(`/topik-i/`, `/topik-ii/`)의 문항 번호 표 | 줄마다 `key`. 글 머리말의 `hub_key`가 같으면 그 줄에 "Read the guide" 링크가 자동 생성. **새 유형 글을 쓰면 `hub_key`를 꼭 넣을 것**, 표에 없는 유형이면 줄 추가 |
+| `_includes/hub-table.html` | 허브 표 출력 | `{% include hub-table.html exam="topik-i" %}` |
 | `README.md` | 사용자용 한국어 운영 안내 | 사이트 빌드에서 제외됨 |
 
 | `_drafts/` | 검수 전 글 초안 | 사이트에 안 나옴(저장소에는 공개). 검수 후 날짜 붙여 `_posts/`로 이동 |

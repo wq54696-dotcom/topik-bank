@@ -1,5 +1,6 @@
 ---
 title: "TOPIK II Reading 25-27: How to Understand Korean News Headlines"
+hub_key: t2-r-25   # /topik-i/, /topik-ii/ 허브 표에서 이 글로 연결하는 열쇠 (_data/topik_map.yml의 key)
 excerpt: "Korean headlines drop grammar and use picture words like 거북이걸음 and 몸살. Learn 15 common headline words and try three original practice questions."
 categories:
   - TOPIK II Reading

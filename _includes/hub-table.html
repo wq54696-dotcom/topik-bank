@@ -1,0 +1,25 @@
+{%- comment -%}
+  TOPIK 허브 페이지의 문항 번호 표.
+  사용법: include hub-table.html exam="topik-i"  (또는 "topik-ii")
+  표 내용은 _data/topik_map.yml 에서 고칩니다. 글 머리말에 hub_key 를 넣으면 해당 줄에 링크가 자동으로 생깁니다.
+{%- endcomment -%}
+{%- assign sections = site.data.topik_map[include.exam] -%}
+{%- for s in sections %}
+<h3 id="{{ s.section | slugify }}">{{ s.section }}</h3>
+<p class="hub-summary">{{ s.summary }}</p>
+<table class="hub-table">
+<thead>
+<tr><th>Questions</th><th>Question type</th><th>Guide</th></tr>
+</thead>
+<tbody>
+{%- for r in s.rows -%}
+{%- assign guide = site.posts | where: "hub_key", r.key | first %}
+<tr>
+<td class="hub-table__range">{{ r.range }}</td>
+<td><strong>{{ r.type }}</strong><br><span class="hub-table__ko" lang="ko">{{ r.ko }}</span></td>
+<td class="hub-table__guide">{% if guide %}<a href="{{ guide.url | relative_url }}">Read the guide</a>{% else %}<span class="hub-table__none">Not yet</span>{% endif %}{% if r.shop %}<br><a href="{{ r.shop | relative_url }}">Practice bank</a>{% endif %}</td>
+</tr>
+{%- endfor %}
+</tbody>
+</table>
+{%- endfor %}

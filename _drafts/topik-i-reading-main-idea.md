@@ -1,5 +1,6 @@
 ---
 title: "TOPIK I Reading 46-48: How to Choose the Main Idea"
+hub_key: t1-r-46   # /topik-i/, /topik-ii/ 허브 표에서 이 글로 연결하는 열쇠 (_data/topik_map.yml의 key)
 excerpt: "Questions 46-48 ask for the writer's main idea. Learn where it hides, how to spot the three kinds of wrong answers, and try three original practice questions."
 categories:
   - TOPIK I Reading

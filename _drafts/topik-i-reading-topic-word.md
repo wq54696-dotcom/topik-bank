@@ -1,5 +1,6 @@
 ---
 title: "TOPIK I Reading 31-33: How to Find What the Sentences Are About"
+hub_key: t1-r-31   # /topik-i/, /topik-ii/ 허브 표에서 이 글로 연결하는 열쇠 (_data/topik_map.yml의 key)
 excerpt: "The first three TOPIK I Reading questions ask for one topic word. Learn the umbrella-word trick and try three original practice questions."
 categories:
   - TOPIK I Reading

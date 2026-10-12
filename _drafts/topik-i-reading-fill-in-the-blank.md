@@ -1,5 +1,6 @@
 ---
 title: "TOPIK I Reading: How to Choose the Right Word for the Blank (34-39)"
+hub_key: t1-r-34   # /topik-i/, /topik-ii/ 허브 표에서 이 글로 연결하는 열쇠 (_data/topik_map.yml의 key)
 excerpt: "TOPIK I Reading questions 34-39 test particles, verbs and everyday words. Learn a 3-step check and try four original practice questions."
 categories:
   - TOPIK I Reading

@@ -1,5 +1,6 @@
 ---
 title: "TOPIK II Writing 53: How to Describe a Graph in 200-300 Characters"
+hub_key: t2-w-53   # /topik-i/, /topik-ii/ 허브 표에서 이 글로 연결하는 열쇠 (_data/topik_map.yml의 key)
 excerpt: "A 3-part template and the key expressions for TOPIK II Writing question 53, with an original practice prompt and a model answer."
 categories:
   - TOPIK II Writing
