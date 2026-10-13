@@ -99,7 +99,8 @@
 
 - 테스터는 표시와 의견만 남김. 문장을 직접 고쳐 쓰게 하지 않음(권리 관계)
 - 유료 상품 묶음(`beta-blank30`)은 믿을 만한 테스터에게만 링크 전달
-- 쓰기 51~54처럼 객관식이 아닌 문항은 베타 페이지에서 제외됨(생성기가 보기 4개 문항만 고름). 필요하면 서술형 응답 칸을 추가할 것
+- 서술형 지원(2026-10-13): 베타 템플릿의 문항 `kind`는 `mc`(객관식, 기본) / `blank2`(㉠㉡ 한 줄 입력 2개) / `essay`(글자 수 표시 입력, `min`·`max`·`indent`). 서술형은 채점 대신 모범 답안과 자가 비교. 쓰기 상품 묶음은 `make_beta.py`의 `writing_pack()`이 `유료상품\writing5154\q51~q54.py`에서 직접 만듦(문항관리.xlsx를 거치지 않음, 블로그 초안의 쓰기 6문항은 대상 아님). 결과 코드는 `TOPIKBETA2:`(deflate 압축), `decode_result.py`가 서술 답안 전문을 `results\…-answers.txt`로 저장
+- 쓰기 베타 페이지: https://claude.ai/artifact/SZowGqTTSnh2Swx9m2eV7H (36문항, 16세트). 검수 화면에는 `writing` 묶음(앵커 `#writing`)으로 36문항 등록
 - 현재 베타 페이지: 공개 예정 묶음 https://claude.ai/artifact/698rtVFKQHeP7hLHn6dYLH (39문항) / 유료 30제 https://claude.ai/artifact/5jaqq7sF55Fs9bCgZyZZQq (30문항). 둘 다 비공개 상태로 게시했고 공유 범위는 사용자가 Share 메뉴에서 정함
 
 **글 구성**
